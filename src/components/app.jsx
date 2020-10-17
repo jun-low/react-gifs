@@ -11,7 +11,6 @@ class App extends Component {
       gifs: [],
       selectedGifId: "yR4xZagT71AAM"
     };
-    // this.search("homer thinking");
   }
 
   search = (query) => {
@@ -20,11 +19,10 @@ class App extends Component {
     // Search with options using callback
     giphy(API_KEY).search({
       q: query,
-      rating: 'g',
-      // limit: 15
+      rating: 'g  ',
+      limit: 15
     }, (error, result) => {
       // Res contains gif data!
-      // console.log(result);
       this.setState({
         gifs: result.data
       });
@@ -32,7 +30,6 @@ class App extends Component {
   }
 
   render() {
-    // handleClick = this.setState
     return (
       <div>
         <div className="left-scene">
